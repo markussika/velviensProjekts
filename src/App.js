@@ -1,32 +1,13 @@
 
-import React, { useState } from 'react';
+import Counter from"./Counter";
+import Hillo from "./Hillo";
 function App() {
-  const [change, setChange] = useState(1);
-  const [count, setCount] = useState(0);
-function handleChange(event){
-  setChange(event.target.value)
-}
-
+  const allNames = ["Jikabs", "Glustavs", "Klucis"]
   return(
     <>
-    
-    <h1>sveiki!</h1>
-    
-    <div>
-      <h2>cik lodes sodien gusitis izdzera? atbilde ir  {count} </h2>
-      <input type = "number" value={change} onChange = {handleChange}></input>
-      <button onClick={() => setCount(count + change)}>
-        +1
-      </button>
-    </div>
-    <div>
-      
-      <button onClick={() => setCount(count - change)}>
-        -1
-      </button>
-
-    </div>
-    
+    <Counter/>
+    <Hillo/>
+    <Hillo/>
     </>
   )
 }
