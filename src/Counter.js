@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react';
-function Counter() {
+function Counter(props) {
   const [change, setChange] = useState(1);
   const [count, setCount] = useState(0);
 function handleChange(event){
   setChange(event.target.value)
 }
+
 
   return(
     <>

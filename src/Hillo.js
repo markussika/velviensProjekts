@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 
 
-function Hillo(){
+function Hillo(props){
 
-const [name, setName] = useState("")
-
+const [name, setName] = useState(props.name)
+function changeName(event){
+    setName(event.target.value);
+}
 
 
     return(
         <>
     <h1>Hello, {name}</h1>
     
-        <input type="text" value ={name} onChange = {((gustavs)=> setName(gustavs.target.value))}></input>
+        <input type="text" value ={name} onChange = {(changeName)}></input>
         </>
     )
 
